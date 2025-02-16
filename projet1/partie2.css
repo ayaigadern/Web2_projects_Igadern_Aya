@@ -1,0 +1,129 @@
+.all2{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color:rgb(57, 62, 77) ;
+    justify-content: center;
+    margin: 0 auto;
+    gap:15px;
+    margin-top: 100px;
+}
+.options div{
+    color: white;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+    width: 98%;
+    margin-left:5px ;
+}
+.api{
+    display: flex;
+    color: white;
+    background-color: black;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.header{
+    color: white;
+    font-size: 20px;
+}
+.titre{
+    font-size: 30px;
+    color:#7158cd;
+    text-align: center;
+    margin-top: 150px;
+    
+}
+body{
+    background-color: #fff5e1 ;
+}
+#btn{
+    display: flex;
+    width: 30%;
+    height: 60px;
+    margin: 80px auto;
+    justify-content: center;
+    align-items: center;
+    color: #7158cd;
+    background-color:yellow ;
+    font-size: 25px;
+}
+.container{
+    border: 2px solid #7158cd;
+    width: 50%;
+    height: 300px;
+    justify-content: center;
+    margin: 20px auto;
+    flex-direction: column;
+    gap: 2px;
+    display: flex;
+    font-size: 25px;
+
+    
+}
+.questions{
+    margin: 30px ;
+    position: relative;
+    bottom: 15%;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.answers{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+}
+.answers label{
+    
+    margin-left: 5%;
+    font-size: 20px;
+}
+.answers input{
+    transform: scale(1.5);
+}
+.all{
+    flex-direction: column;
+    display: flex;
+    
+}
+.time{
+    display: flex;
+    
+    color:red;
+    width: 10%;
+    border-radius: 50% 50%;
+    font-size: 30px;
+    
+    
+}
+.plus{
+    display: flex;
+    flex-direction: row;
+}
+.note{
+    color: red;
+    text-align: center;
+}
+.result{
+    font-size: 40px;
+    text-align: center;
+    color: green;
+    position: relative;
+    top:70px;
+}
+.quiz{
+    display: none;
+    flex-direction: column;
+}
+
