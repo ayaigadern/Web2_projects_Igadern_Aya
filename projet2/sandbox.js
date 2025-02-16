@@ -1,7 +1,8 @@
 //to do
+// Ajout d'une tâche à la liste au moment d'appuyer sur 'Enter'
 document.querySelector("form.add input").addEventListener("keydown", function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault();
+        event.preventDefault(); // Empêcher l'ajout par défaut du formulaire
         let to_add = this.value.trim(); 
 
         if (to_add === "") return;
@@ -15,13 +16,13 @@ document.querySelector("form.add input").addEventListener("keydown", function(ev
         let element_i = document.createElement("i");
         element_i.className = "far fa-trash-alt delete";
         element_i.addEventListener("click", function() {
-            element_li.remove();
+            element_li.remove(); // Suppression de la tâche au clic sur l'icône
         });
 
         element_li.appendChild(element_span);
         element_li.appendChild(element_i);
         document.querySelector(".list-group").appendChild(element_li);
-        this.value = "";
+        this.value = ""; // Réinitialisation du champ d'entrée
     }
 });
 
@@ -41,10 +42,10 @@ document.querySelector("form.search input").addEventListener("input",function(){
 todos.forEach(todo=>{
     let task=todo.querySelector("span").innerText.toLowerCase();
     if(task.includes(filtre)){
-        todo.style.display="flex";
+        todo.style.display="flex"; // Afficher les tâches correspondantes
     }
     else{
-        todo.style.setProperty("display", "none", "important");
+        todo.style.setProperty("display", "none", "important"); // Cacher les tâches non correspondantes
     }
 });
 });

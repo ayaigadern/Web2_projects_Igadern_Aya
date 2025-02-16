@@ -1,3 +1,4 @@
+// Déclaration d'un tableau vide pour stocker les questions
 let questions=[];
 
 document.querySelector(".api").addEventListener("click", function(event) {
@@ -31,7 +32,6 @@ document.querySelector(".api").addEventListener("click", function(event) {
                     allAnswers: [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5)
                 };
             });
-            console.log(questions);
             
 
         })
@@ -48,6 +48,7 @@ document.querySelector(".api").addEventListener("click", function(event) {
         function load(){
             clearInterval(timerInterval);
             index++;
+            // Création des éléments pour afficher la question
             let plus=document.createElement("div");
             plus.className="plus";
         
@@ -73,7 +74,7 @@ document.querySelector(".api").addEventListener("click", function(event) {
             answers.className="answers";
         
             if(index<questions.length){
-                
+                // Affichage de la question et de ses réponses
                 ques.innerText=questions[index].question;
                 questions[index].allAnswers.forEach((element,i) => {
                     let label=document.createElement("label");
@@ -81,7 +82,6 @@ document.querySelector(".api").addEventListener("click", function(event) {
                     checkbox.type="checkbox";
                     checkbox.name=`question${index}`;
                     checkbox.value=element;
-                    console.log("malak",checkbox.value);
                     
                     label.appendChild(checkbox);
                     let span=document.createElement("span");
@@ -148,7 +148,6 @@ function save(questionIndex) {
 }
        
         
-        //save
         
         //result
         function Results() {
@@ -161,10 +160,10 @@ function save(questionIndex) {
             a.innerText = `Votre score est de ${score} sur ${questions.length}`;
             window.scrollTo(0, 0);
         }
-        //result
+
         
         
-        
+        // Gestion des clics sur le bouton suivant
         document.getElementById("btn").addEventListener("click",function(){
             if(index==questions.length-1){
                 clearInterval(timerInterval);
