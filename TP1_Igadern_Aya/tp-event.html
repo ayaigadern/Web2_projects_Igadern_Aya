@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Manipulation de vue</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+	<style>
+		.btn{
+			display: flex;
+			width: 30%;
+			height: 80px;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			margin-top: 70px;
+			font-size: 30px;
+			background-color: brown;
+		}
+		.ex2{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 100px;
+			gap:10px;
+
+		}
+		.btn2{
+			width: 20%;
+			height: 80px;
+			font-size: 40px;
+		}
+		.count{
+			font-size: 30px;
+		}
+	</style>
+
+<div id="monapp">
+	<button :class="{btn:true}" @click="changer">{{titre}}</button>
+	<div :class="{ex2:true}">
+	<button :class="{btn2:true}" @click="incrementer">{{plus}}</button>
+	<div :class="{count:true}">{{count}}</div>
+	<button :class="{btn2:true}" @click="decrementer">{{moin}}</button>
+	</div>
+	
+
+	
+</div>
+
+
+<script>
+	const appli = {
+		data () {
+				return {
+					titre:"Cliquez moi!",
+					plus: "++",
+					moin:"--",
+					count:0,
+					
+				};
+			},
+			methods:{
+				changer(){
+					this.titre="Cliqué!";
+				},
+				incrementer(){
+					this.count+=1;
+				},
+				decrementer(){
+					this.count-=1;
+				}
+			}
+	};
+	
+Vue.createApp(appli).mount("#monapp");
+</script>
+
+</body>
+</html>

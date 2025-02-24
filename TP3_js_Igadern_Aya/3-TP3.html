@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1-38</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+  <style>
+    .toute{
+        background-color: blue;
+        width: 20%;
+        height: 40px;
+        font-size: 20px;
+    }
+    .faire{
+      background-color: red;
+      width: 20%;
+        height: 40px;
+        font-size: 20px;
+    }
+    .terminer{
+      background-color: green;
+      width: 20%;
+        height: 40px;
+        font-size: 20px;
+
+    }
+    .terminer2{
+      background-color: rgb(71, 203, 71);
+      width: 20%;
+        height: 40px;
+        font-size: 18px;
+
+    }
+    .size{
+      font-size: 18px;
+    }
+    .nbr{
+      font-size: 20px;
+      color:blueviolet
+    } 
+    fieldset{
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      justify-content: center;
+      gap:10px;
+    }
+  </style>
+    <div id="app">
+      <div>
+        <p :class="{nbr:true}">Nombre total de tâches : {{ TaskList.length }}</p>
+        <p :class="{nbr:true}">Nombre de tâches affichées : {{ filteredTasks.length }}</p>
+    </div>
+      <fieldset>
+        <legend :class="{size:true}">Filtre des taches</legend>
+        <button :class="{toute:true}" @click="filtre = 'toutes'">Toutes</button>
+            <button :class="{faire:true}" @click="filtre = 'faire'">À faire</button>
+            <button :class="{terminer:true}" @click="filtre = 'termine'">Terminées</button>
+    </fieldset>
+      <div :class="{size:true}" v-for="i in filteredTasks" :key="i.id">
+      
+          <h3>{{i.title}}</h3>
+        <p>{{i.description}}</p>
+        <p>Statut : {{i.completed?'Terminée' : 'A faire'}}</p>
+        <div v-if="!i.completed">
+          <button :class="{terminer2:true}" @click="done(i)">{{titre}}</button>
+          
+        </div>
+        
+        
+
+      </div>
+
+
+        
+    </div>
+    <script>
+        const app = Vue.createApp({
+          data(){
+            return{
+              titre:"clique si terminé",
+              TaskList: [
+    {
+      "id": 1,
+      "title": "Faire les courses",
+      "description": "Acheter des légumes et du lait.",
+      "completed": false,
+    },
+    {
+      "id": 2,
+      "title": "Faire du sport",
+      "description": "Courir pendant 30 minutes.",
+      "completed": true,
+    },
+    {
+      "id": 3,
+      "title": "Réviser pour l'examen",
+      "description": "Relire le chapitre 5 du manuel.",
+      "completed": false,
+    }
+  ],
+    filtre:"toutes",
+            }
+          },
+          methods:{
+            done(p){
+              p.completed=true;
+            }
+          },
+          computed:{
+            filteredTasks() {
+                    if (this.filtre === "toutes") return this.TaskList;
+                    if (this.filtre === "faire") return this.TaskList.filter(t => !t.completed);
+                    if (this.filtre === "termine") return this.TaskList.filter(t => t.completed);
+                }
+
+          }
+        });
+            
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
