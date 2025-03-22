@@ -1,0 +1,84 @@
+{
+  "jobs": [
+    {
+      "id": "10",
+      "titre": "Data Scientist",
+      "description": "Analyse de données complexes pour fournir des insights stratégiques et améliorer les processus d'affaires.",
+      "salaire": 95000,
+      "date_de_creation": "2025-03-15",
+      "annee_experience": "5"
+    },
+    {
+      "id": "11",
+      "titre": "Développeur Full Stack",
+      "description": "Conception, développement et maintenance d'applications web front-end et back-end.",
+      "salaire": 75000,
+      "date_de_creation": "2025-03-18",
+      "annee_experience": "3"
+    },
+    {
+      "id": "12",
+      "titre": "Chef de Projet IT",
+      "description": "Gestion de projets technologiques, supervision des équipes et coordination des activités de développement.",
+      "salaire": 88000,
+      "date_de_creation": "2025-03-10",
+      "annee_experience": "7"
+    },
+    {
+      "id": "13",
+      "titre": "Product Manager",
+      "description": "Définition de la vision produit, gestion du cycle de vie des produits et alignement avec les objectifs stratégiques de l'entreprise.",
+      "salaire": 70000,
+      "date_de_creation": "2025-02-28",
+      "annee_experience": "4"
+    },
+    {
+      "id": "14",
+      "titre": "Ingénieur DevOps",
+      "description": "Automatisation des processus de développement, gestion des déploiements et amélioration des systèmes d'intégration continue.",
+      "salaire": 80000,
+      "date_de_creation": "2025-03-20",
+      "annee_experience": "6"
+    },
+    {
+      "id": "15",
+      "titre": "Administrateur Système",
+      "description": "Maintenance des systèmes informatiques, gestion des serveurs et supervision de la sécurité des réseaux.",
+      "salaire": 55000,
+      "date_de_creation": "2025-03-22",
+      "annee_experience": "5"
+    },
+    {
+      "id": "16",
+      "titre": "Développeur Mobile",
+      "description": "Création d'applications mobiles pour iOS et Android, gestion des mises à jour et des performances des applications.",
+      "salaire": 65000,
+      "date_de_creation": "2025-03-25",
+      "annee_experience": "3"
+    },
+    {
+      "id": "17",
+      "titre": "Consultant Cloud",
+      "description": "Conseil sur l'adoption et l'optimisation des solutions cloud pour les entreprises.",
+      "salaire": 90000,
+      "date_de_creation": "2025-03-18",
+      "annee_experience": "8"
+    },
+    {
+      "id": "18",
+      "titre": "UX Researcher",
+      "description": "Mener des recherches sur les utilisateurs pour aider à la conception d'expériences utilisateurs adaptées et intuitives.",
+      "salaire": 70000,
+      "date_de_creation": "2025-03-17",
+      "annee_experience": "4"
+    },
+    {
+      "id": "19",
+      "titre": "Responsable Infrastructure IT",
+      "description": "Gestion de l'infrastructure technologique, optimisation des ressources matérielles et gestion de l'architecture réseau.",
+      "salaire": 85000,
+      "date_de_creation": "2025-03-30",
+      "annee_experience": "6"
+    }
+  ]
+}
