@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "CSS Grid vs Flexbox: When to Use Each",
+      "body": "Both CSS Grid and Flexbox are powerful layout tools, but they serve different purposes. This guide will help you understand which one to use in different layout scenarios.",
+      "tags": [
+        "CSS",
+        "Layout",
+        "Web Design"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Modern JavaScript Features You Should Know",
+      "body": "ES6+ brought many powerful features to JavaScript. Let's explore arrow functions, destructuring, template literals, and other modern syntax that can make your code cleaner.",
+      "tags": [
+        "JavaScript",
+        "ES6",
+        "Web Development"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Building a REST API with Express.js",
+      "body": "Learn how to create a robust REST API using Node.js and Express. We'll cover routing, middleware, error handling, and best practices for API design.",
+      "tags": [
+        "Node.js",
+        "Express",
+        "Backend",
+        "API"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Responsive Design Principles in 2023",
+      "body": "Responsive design has evolved beyond media queries. Discover modern techniques like container queries, CSS clamp(), and intrinsic design patterns.",
+      "tags": [
+        "CSS",
+        "Responsive Design",
+        "Frontend"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "State Management in Vue with Pinia",
+      "body": "Pinia is the new official state management library for Vue. This tutorial shows how to set up stores, use actions, and integrate it with your components.",
+      "tags": [
+        "Vue",
+        "State Management",
+        "Pinia"
+      ]
+    }
+    
+  ]
+}
