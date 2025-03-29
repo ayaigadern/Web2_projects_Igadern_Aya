@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import CreatePostView from '../views/CreatePostView.vue';
 import PostDetailView from '../views/PostDetailView.vue';
-import TagFilterView from '../views/TagFilterView.vue';  // Assurez-vous d'importer TagFilterView
+import TagFilterView from '../views/TagFilterView.vue';  
 
 const routes = [
   { path: '/', component: HomePage },
@@ -10,8 +10,8 @@ const routes = [
   { path: '/posts/:id', component: PostDetailView },
   {
     path: '/tags/:tag',
-    component: TagFilterView,  // Utilisez TagFilterView ici
-    props: true,  // Passez le paramètre 'tag' en tant que prop
+    component: TagFilterView,  
+    props: true, 
   },
 ];
 

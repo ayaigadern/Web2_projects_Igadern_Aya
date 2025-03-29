@@ -1,12 +1,10 @@
 <template>
   <div class="post-detail-container">
-    <!-- Loading state -->
     <div v-if="!post" class="loading-state">
       <div class="spinner"></div>
       <p>Loading post...</p>
     </div>
 
-    <!-- Post content -->
     <div v-else class="post-content">
       <!-- Back button -->
       <button @click="goBack" class="back-button">
@@ -16,11 +14,9 @@
         Back to posts
       </button>
 
-      <!-- Post title and content -->
       <h1 class="post-title">{{ post.title }}</h1>
       <p class="post-body">{{ post.body }}</p>
 
-      <!-- Tags section -->
       <div class="tags-section">
         <h3 class="tags-heading">Tags:</h3>
         <div class="tags-container">
@@ -30,7 +26,6 @@
         </div>
       </div>
 
-      <!-- Delete button -->
       <button @click="confirmDelete" class="delete-button">
         Delete Post
         <svg xmlns="http://www.w3.org/2000/svg" class="delete-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -60,12 +55,12 @@ export default {
         post.value = await fetchPost(route.params.id);
       } catch (error) {
         console.error('Error fetching post:', error);
-        router.push('/not-found'); // Redirect if post doesn't exist
+        router.push('/not-found'); 
       }
     });
 
     const goBack = () => {
-      router.go(-1); // Go back to previous page
+      router.go(-1); 
     };
 
     const confirmDelete = async () => {
@@ -92,7 +87,6 @@ export default {
   padding: 2rem;
 }
 
-/* Loading state */
 .loading-state {
   display: flex;
   flex-direction: column;
@@ -115,7 +109,6 @@ export default {
   to { transform: rotate(360deg); }
 }
 
-/* Back button */
 .back-button {
   display: flex;
   align-items: center;
@@ -139,7 +132,6 @@ export default {
   height: 1rem;
 }
 
-/* Post content */
 .post-title {
   font-size: 2rem;
   font-weight: 600;
@@ -156,7 +148,6 @@ export default {
   white-space: pre-line;
 }
 
-/* Tags section */
 .tags-section {
   margin-bottom: 2rem;
 }
@@ -183,7 +174,6 @@ export default {
   font-weight: 500;
 }
 
-/* Delete button */
 .delete-button {
   display: flex;
   align-items: center;
@@ -213,7 +203,6 @@ export default {
   height: 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .post-detail-container {
     padding: 1.5rem;

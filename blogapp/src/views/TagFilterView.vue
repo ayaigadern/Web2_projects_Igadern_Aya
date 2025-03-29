@@ -132,7 +132,6 @@ export default {
   font-size: 1.1rem;
 }
 
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .tag-title {
     color: #e2e8f0;
@@ -155,7 +154,6 @@ export default {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .tag-posts-container {
     padding: 1.5rem;

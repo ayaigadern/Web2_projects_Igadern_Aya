@@ -4,7 +4,6 @@
       <h1 class="page-title">Create New Post</h1>
       
       <form @submit.prevent="submitPost" class="post-form">
-        <!-- Title Field -->
         <div class="form-row">
           <label for="title" class="input-label">Title</label>
           <input
@@ -17,7 +16,6 @@
           />
         </div>
 
-        <!-- Content Field -->
         <div class="form-row">
           <label for="body" class="input-label">Content</label>
           <textarea
@@ -30,7 +28,6 @@
           ></textarea>
         </div>
 
-        <!-- Tags Field -->
         <div class="form-row">
           <label for="tags" class="input-label">Tags</label>
           <input
@@ -44,7 +41,6 @@
           <p class="help-text">Separate tags with commas</p>
         </div>
 
-        <!-- Submit Button -->
         <button type="submit" class="submit-button">
           Publish Post
           <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -197,7 +193,6 @@ export default {
   transform: translateX(3px);
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .form-wrapper {
     padding: 25px 20px;
